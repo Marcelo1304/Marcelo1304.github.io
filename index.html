@@ -92,30 +92,38 @@
 
   <!-- header 
    ================================================== -->
+   
   <header>
-    <div class="row">
+  <div class="row">
+    <div class="top-bar">
+      <a class="menu-toggle" href="javascript:void(0);" onclick="toggleMenu()">
+        <span>Menu</span>
+      </a>
 
-      <div class="top-bar">
-        <a class="menu-toggle" href="#"><span>Menu</span></a>
+      <div class="logo">
+        <a href="index.html">Marcelo Duarte</a>
+      </div>
 
-        <div class="logo">
-          <a href="index.html">Marcelo Duarte</a>
-        </div>
+      <nav id="main-nav-wrap">
+        <ul class="main-navigation">
+          <li><a class="smoothscroll" href="#intro" title="Início">INÍCIO</a></li>
+          <li><a class="smoothscroll" href="#about" title="Sobre">SOBRE</a></li>
+          <li><a class="smoothscroll" href="#resume" title="Resumo">RESUMO</a></li>
+          <li><a class="smoothscroll" href="#portfolio" title="Portfolio">PORTFOLIO</a></li>
+          <li><a class="smoothscroll" href="#services" title="Serviços">SERVIÇOS</a></li>
+          <li><a class="smoothscroll" href="#contact" title="Contato">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div> <!-- /top-bar -->
+  </div> <!-- /row -->
+</header>
 
-        <nav id="main-nav-wrap">
-          <ul class="main-navigation">
-            <li class="current"><a class="smoothscroll" href="#intro" title="Início">INÍCIO</a></li>
-            <li><a class="smoothscroll" href="#about" title="Sobre">SOBRE</a></li>
-            <li><a class="smoothscroll" href="#resume" title="Resumo">RESUMO</a></li>
-            <li><a class="smoothscroll" href="#portfolio" title="Portfolio">PORTFOLIO</a></li>
-            <li><a class="smoothscroll" href="#services" title="Serviços">SERVIÇOS</a></li>
-            <li><a class="smoothscroll" href="#contact" title="Contato">CONTATO</a></li>
-          </ul>
-        </nav>
-      </div> <!-- /top-bar -->
-
-    </div> <!-- /row -->
-  </header> <!-- /header -->
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.main-navigation');
+    menu.classList.toggle('show');
+  }
+</script>
 
   <!-- intro section
    ================================================== -->
