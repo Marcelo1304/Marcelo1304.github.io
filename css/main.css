@@ -142,7 +142,7 @@ h6,
 .h05,
 .h06 {
   font-family: "poppins-semibold", sans-serif;
-  color: #002b33;
+  color: #0b2652;
   font-style: normal;
   text-rendering: optimizeLegibility;
   margin-bottom: 2.1rem;
@@ -1174,10 +1174,19 @@ input::-moz-focus-inner {
   margin-bottom: 3.6rem;
   position: relative;
 }
+.section-intro::before {
+  content: "";
+  display: table;/* Espaçamento para os elementos subsequentes */
+}
+
+.section-intro::after {
+  content: "";
+  display: table;/* Espaçamento para os elementos anteriores */
+}
 .section-intro h1 {
   font-family: "poppins-semibold", serif;
   font-size: 3.6rem;
-  color: #002b33;
+  color: #0b2652;
   line-height: 1.25;
   margin-bottom: 1.2rem;
 }
@@ -1371,13 +1380,20 @@ header .logo a {
 
 /* dropdown nav */
 .main-navigation {
-  background: transparent;
-  padding: 24px 30px 42px;
+  background: #F8F8FF;
+  padding: 2px 3px 4px;
   margin: 0;
-  width: 100%;
+  width: 20%;
   height: auto;
   clear: both;
   display: none;
+}
+@media(max-width: 1792px){
+  .main-navigation{
+    padding: 2px 3px 4px;
+    width:60%;
+    background: #f8f8ff
+  }
 }
 .main-navigation > li {
   display: block;
@@ -1387,13 +1403,14 @@ header .logo a {
 }
 .main-navigation li a {
   display: block;
-  color: #ffffff;
+  color: #00BFFF
+;
   width: auto;
   padding: 15px 0;
   line-height: 16px;
   border: none;
 }
-.main-navigation li a:hover {
+.main-navigation li a  :hover {
   color: #00accc;
   padding-left: 1rem;
 }
@@ -2304,6 +2321,17 @@ header .logo a {
 .services-content {
   max-width: 1200px;
 }
+
+.services-content::before{
+    content: "";
+    display: table;
+}
+
+.services-content::after{
+    content: "";
+    display: table;
+
+}
 .services-list {
   margin-top: 1.2rem;
   text-align: center;
@@ -2776,5 +2804,8 @@ footer .copyright span:last-child::after {
 #go-top a:hover {
   background: #000000;
 }
+
+/* ---------------------------------------------------------------------*/
+
 
 /*# sourceMappingURL=main.css.map */
